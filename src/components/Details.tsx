@@ -1,4 +1,4 @@
-import { useParams, Outlet, useLocation, useNavigate } from "react-router-dom";
+import { useParams, Outlet, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import { RootState } from "../app/store";
@@ -7,7 +7,6 @@ const API = "05e9e9a72c07f3a5949ba94dba206c0d";
 
 export const Details = () => {
   const [thisCityWeather, setThisCityWeather] = useState({ hourly: [] });
-  const location = useLocation();
 
   const citiesFromRedux = useSelector(
     (store: RootState) => store.selected.cities

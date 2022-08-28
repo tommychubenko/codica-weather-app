@@ -1,15 +1,13 @@
 import { useState } from "react";
 
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { useAppDispatch } from "../app/hooks";
 import { deleteCity } from "../app/slices";
 import { getCityDetails } from "../app/slices";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { StyledLink } from "./StyledComponents";
-import { RootState } from "../app/store";
 
 export const Home = () => {
-  const [selectedCities, setSelectedCities] = useState([]);
   const citiesFromRedux = useSelector((store) => store.selected);
   const dispatch = useAppDispatch();
   const baseImageURL = (image) =>
@@ -59,15 +57,6 @@ export const Home = () => {
                 <StyledLink to={`/city/${id}`} state={{ city: name }}>
                   View hourly forecast
                 </StyledLink>
-                {/* <button>
-                  <Link
-                    className="city_link"
-                    to={`/city/${id}`}
-                    state={{ city: name }}
-                  >
-                    More...
-                  </Link>
-                </button> */}
               </div>
             </div>
           );
