@@ -17,7 +17,7 @@
 // >;
 
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
-import counterReducer from "../features/counter/counterSlice";
+
 import {
   persistStore,
   persistReducer,
@@ -43,7 +43,6 @@ const persisted = persistReducer(persistConfig, citiesReducer);
 export const store = configureStore({
   reducer: {
     selected: persisted,
-    counter: counterReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

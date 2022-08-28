@@ -16,7 +16,7 @@ export const Home = () => {
     `http://openweathermap.org/img/wn/${image}@2x.png`;
 
   return (
-    <div className="city_card--thumb">
+    <div className="city_card--thumb" data-testid="home">
       <div className="city_card--list">
         {citiesFromRedux.cities.map((city) => {
           const {
