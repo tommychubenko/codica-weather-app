@@ -1,0 +1,252 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 375px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 767.98px) {
+  .container {
+    width: 738px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 1199.98px) {
+  .container {
+    width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.search_link {
+  text-decoration: none;
+}
+
+.search_logo {
+  color: #ed3e49;
+  font-family: 'Titan One', cursive;
+  font-size: 25px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.city_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #ed3e49;
+  border-radius: 5px;
+  height: 250px;
+  min-width: 200px;
+  padding: 10px;
+}
+
+.city_card--title {
+  font-weight: 500;
+}
+
+.city_card--top {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #ed3e49;
+}
+
+.city_card--btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 3px;
+  -webkit-box-flex: 75px;
+      -ms-flex: 75px;
+          flex: 75px;
+}
+
+.city_card--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-y: hidden;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.city_card--btn {
+  border: 1px solid #ed3e49;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #ed3e49;
+}
+
+.city_card--image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.search_input {
+  font-size: 15px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 30px;
+  border: 0;
+  padding: 0 10px;
+  border: 1px solid #ed3e49;
+  border-radius: 5px;
+  outline: 0;
+  margin-bottom: 5px;
+}
+
+.search_input::-webkit-input-placeholder {
+  color: #8F8C8B;
+}
+
+.search_input:-ms-input-placeholder {
+  color: #8F8C8B;
+}
+
+.search_input::-ms-input-placeholder {
+  color: #8F8C8B;
+}
+
+.search_input::placeholder {
+  color: #8F8C8B;
+}
+
+.search_input:focus {
+  border: 1px solid #ed3e49;
+  -webkit-box-shadow: 0px 0px 6px 1px #ed3e49;
+          box-shadow: 0px 0px 6px 1px #ed3e49;
+}
+
+.search_thumb {
+  background-color: #fff;
+  min-height: 80px;
+}
+
+.search_thumb--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+}
+
+.search_thumb--item {
+  border: 1px dashed #ed3e49;
+  padding: 5px;
+}
+
+.search_thumb--item:not(:last-child) {
+  margin-right: 5px;
+}
+
+.search_thumb--link {
+  color: #ed3e49;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hourlyWeather_closeBtn {
+  border: 1px solid #ed3e49;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #ed3e49;
+}
+
+.hourlyWeather_title {
+  color: #ed3e49;
+}
+
+.hourlyWeather_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-y: hidden;
+  list-style: none;
+  gap: 5px;
+  height: 150px;
+}
+
+.hourlyWeather_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 100px;
+}
+
+.error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.error_image {
+  width: 50%;
+}
+
+.error_text {
+  color: #ed3e49;
+  line-height: 1.5;
+}
+/*# sourceMappingURL=index.css.map */

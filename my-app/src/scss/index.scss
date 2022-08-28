@@ -1,0 +1,243 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+$tablet: 767.98 + px;
+$pc: 1199.98 + px;
+$mainColor: #ed3e49;
+$grey: #8F8C8B;
+
+.container {
+    width: 375px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+
+
+    @media screen and (min-width: $tablet) {
+        width: 738px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+
+    @media screen and (min-width: $pc) {
+        width: 1170px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+
+
+.search {
+    display: flex;
+    flex-direction: column;
+
+    &_link {
+        text-decoration: none;
+    }
+
+    &_logo {
+        color: $mainColor;
+        font-family: 'Titan One', cursive;
+        font-size: 25px;
+        text-align: center;
+        margin: 20px 0;
+
+
+    }
+
+}
+
+.city_card {
+    display: flex;
+
+    flex-direction: column;
+    border: 1px solid $mainColor;
+    border-radius: 5px;
+    height: 250px;
+    min-width: 200px;
+    padding: 10px;
+
+
+
+    &--title {
+        font-weight: 500;
+    }
+
+
+
+    &--top {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid $mainColor;
+    }
+
+    &--btns {
+        display: flex;
+        justify-content: flex-end;
+        gap: 3px;
+        flex: 75px
+    }
+
+    &--list {
+        display: flex;
+        overflow-y: hidden;
+        gap: 10px;
+        margin-bottom: 20px;
+
+    }
+
+    &--btn {
+
+        border: 1px solid $mainColor;
+        border-radius: 5px;
+        background-color: #fff;
+        color: $mainColor;
+    }
+
+    &--image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+    }
+}
+
+.search {
+
+    &_input {
+       
+        font-size: 15px;
+        box-sizing: content-box;
+      
+        height: 30px;
+        border: 0;
+        padding: 0 10px;
+        border: 1px solid $mainColor;
+        border-radius: 5px;
+        outline: 0;
+        margin-bottom: 5px;
+
+
+
+        &::placeholder {
+            color: $grey;
+
+        }
+
+        &:focus {
+            border: 1px solid $mainColor;
+            box-shadow: 0px 0px 6px 1px rgba(237, 62, 73, 1);
+
+
+
+
+        }
+    }
+
+    &_thumb {
+
+        background-color: #fff;
+        // width: 100%;
+        min-height: 80px;
+
+
+        &--list {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+
+        &--item {
+            border: 1px dashed $mainColor;
+            padding: 5px;
+
+
+
+            &:not(:last-child) {
+                margin-right: 5px;
+            }
+        }
+
+        &--link {
+            color: $mainColor;
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+.hourlyWeather {
+
+    &_closeBtn {
+
+        border: 1px solid $mainColor;
+        border-radius: 5px;
+        background-color: #fff;
+        color: $mainColor;
+    }
+
+    &_title {
+        color: $mainColor;
+
+    }
+
+    &_list {
+        display: flex;
+
+        overflow-y: hidden;
+        list-style: none;
+        gap: 5px;
+
+        height: 150px;
+    }
+
+    &_item {
+
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+
+    }
+
+    // &_temperature {
+    //     border: 1px solid $mainColor;
+    // }
+
+}
+
+.error{
+    display: flex;
+    gap: 20px;
+    &_image {
+        width: 50%;
+    }
+    &_text {
+        color: $mainColor;
+        line-height: 1.5;
+    }
+}

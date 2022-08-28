@@ -1,7 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+// import React from "react";
+// import { Routes, Route } from "react-router-dom";
+// import { Details } from "./components/Details";
+// import { Error } from "./components/Error";
+// import { Home } from "./components/Home";
+// import { SearchBar } from "./components/SearchBar";
+
+// export const add = (num1: number, num2: number) => {
+//   return num1 + num2;
+// };
+
+// const App = () => {
+//   return (
+//     <div className="container">
+//       <SearchBar />
+//       <Routes>
+//         <Route path="/" element={<Home />}>
+//           <Route path="/city/:id" element={<Details />} />
+//         </Route>
+//         <Route path="*" element={<Error />} />
+//       </Routes>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+import React from "react";
+import logo from "./logo.svg";
+import { Counter } from "./features/counter/Counter";
+import "./App.css";
 
 function App() {
   return (
