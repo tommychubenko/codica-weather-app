@@ -1,4 +1,3 @@
-
 import { Routes, Route } from "react-router-dom";
 import { Details } from "./components/Details";
 import { Error } from "./components/Error";
@@ -11,6 +10,8 @@ const App = () => {
       <SearchBar />
       <Routes>
         <Route path="/" element={<Home />}>
+          <Route path="/codica-weather-app/" element={<Home />} />
+
           <Route path="/city/:id" element={<Details />} />
         </Route>
         <Route path="*" element={<Error />} />
@@ -20,5 +21,3 @@ const App = () => {
 };
 
 export default App;
-
-
